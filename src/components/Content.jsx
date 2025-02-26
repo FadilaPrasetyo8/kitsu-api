@@ -21,8 +21,6 @@ const Content = ({ animes, loading, error }) => {
     );
   if (error) return <p>Error loading data.</p>;
 
-  console.log(animes);
-
   return (
     <ContainerContent>
       {animes?.data?.length > 0 ? (

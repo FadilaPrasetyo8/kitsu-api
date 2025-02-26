@@ -15,7 +15,7 @@ const ContentTop = ({ search, bgimage }) => {
         <CardSearch>
           <Headers>Find Movies, TV shows and more</Headers>
           <InputSearch
-            onChange={(e) => console.log(search(e.target.value))}
+            onChange={(e) => search(e.target.value)}
             type="text"
             placeholder="Search for movies and tv shows..."
           />
