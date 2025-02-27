@@ -1,7 +1,9 @@
 import axios from "axios";
 
-export const getAnime = async () => {
-  const dataAnime = await axios.get(`${import.meta.env.VITE_PUBLIC_BASE_URL_API}/anime`);
+export const getAnime = async ({ pages, perpages }) => {
+  const dataAnime = await axios.get(
+    `${import.meta.env.VITE_PUBLIC_BASE_URL_API}/anime?page[number]=${pages}&page[size]=${perpages}`
+  );
   return dataAnime;
 };
 
